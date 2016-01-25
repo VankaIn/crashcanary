@@ -1,0 +1,30 @@
+<manifest package="com.github.vankain.crashcanary_library"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <application>
+        <!--<activity-->
+            <!--android:name="com.github.vankain.crashcanary_library.ui.DisplayCrashActivity"-->
+            <!--android:taskAffinity="com.github.vankain.crashcanary_library">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN"/>-->
+                <!--<category android:name="android.intent.category.LAUNCHER"/>-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
+        <activity
+            android:name="com.github.vankain.crashcanary_library.ui.DisplayCrashActivity"
+            android:enabled="true"
+            android:icon="@drawable/crash_canary_icon"
+            android:label="@string/display_activity_label"
+            android:taskAffinity="com.github.vankain.crashcanary_library"
+            android:theme="@style/crash_canary_BlockCanary.Base">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
