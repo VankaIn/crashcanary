@@ -38,32 +38,12 @@ public abstract class CrashCanaryContext {
      */
     public abstract String getUid();
 
-    /**
-     * 是否需要展示崩溃界面，如仅在Debug包开启
-     *
-     * @return 是否需要展示崩溃界面
-     */
     public abstract boolean isNeedDisplay();
 
-    /**
-     * Log文件保存的位置，如"/crashcanary/log"
-     *
-     * @return Log文件保存的位置
-     */
     public abstract String getLogPath();
 
-    /**
-     * 标示符，可以唯一标示该安装版本号，如版本+渠道名+编译平台
-     *
-     * @return apk唯一标示符
-     */
     public abstract String getQualifier();
 
-    /**
-     * 获得写log线程的handler
-     *
-     * @return 写log线程的handler
-     */
     public Handler getWriteLogFileThreadHandler() {
         return sWriteLogThread.getHandler();
     }

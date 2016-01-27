@@ -84,7 +84,7 @@ public class PerformanceUtils {
                     }
                 }
             }
-            sTotalMemo = initial_memory;// Byte转换为KB或者MB，内存大小规格化
+            sTotalMemo = initial_memory;
         }
         return sTotalMemo;
     }

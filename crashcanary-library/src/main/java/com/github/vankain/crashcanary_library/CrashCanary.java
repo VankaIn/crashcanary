@@ -56,7 +56,7 @@ public class CrashCanary {
                 }
             });
         } catch (Exception e) {
-            e.printStackTrace();//不处理
+            e.printStackTrace();
         }
     }
 

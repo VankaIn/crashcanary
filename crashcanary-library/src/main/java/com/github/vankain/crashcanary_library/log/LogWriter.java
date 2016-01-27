@@ -10,8 +10,6 @@ import java.io.OutputStreamWriter;
 import java.text.SimpleDateFormat;
 
 /**
- * 写文件线程
- * <p>
  * Created by markzhai on 2015/9/25.
  */
 public class LogWriter {
@@ -38,7 +36,7 @@ public class LogWriter {
     }
 
     /**
-     * 清除所有过期的文件，see {@code OBSOLETE_DURATION}
+     * see {@code OBSOLETE_DURATION}
      */
     public static void cleanOldFiles() {
         CrashCanaryContext.get().getWriteLogFileThreadHandler().post(new Runnable() {
