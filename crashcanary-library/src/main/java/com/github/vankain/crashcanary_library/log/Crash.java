@@ -35,7 +35,7 @@ public class Crash {
     public String cause;
     public File logFile;
     public String versionName = "";
-    public int versionCode;
+    public String versionCode;
     public String imei = "";
     public String qualifier;
     public String apiLevel = "";
@@ -56,8 +56,8 @@ public class Crash {
         if (crash.versionName == null || crash.versionName.length() == 0) {
             try {
                 PackageInfo info = context.getPackageManager().getPackageInfo(context.getPackageName(), 0);
-                crash.versionCode = info.versionCode;
-                crash.versionName = info.versionName;
+                crash.versionCode = info.versionCode + "";
+                crash.versionName = info.versionName + "";
             } catch (Throwable e) {
                 e.printStackTrace();
             }
@@ -97,7 +97,11 @@ public class Crash {
                     crash.apiLevel = line.split(KV)[1];
                 } else if (line.startsWith(KEY_IMEI)) {
                     crash.imei = line.split(KV)[1];
-                } else if (line.startsWith(KEY_UID)) {
+                } else if(line.startsWith(KEY_VERSION_NAME)){
+                    crash.versionName = line.split(KV)[1];
+                } else if(line.startsWith(KEY_VERSION_CODE)){
+                    crash.versionCode = line.split(KV)[1];
+                }else if (line.startsWith(KEY_UID)) {
                     crash.uid = line.split(KV)[1];
                 } else if(line.startsWith(KEY_CAUSE)){
                     crash.cause = line.split(KV)[1];
@@ -194,11 +198,11 @@ public class Crash {
         return this;
     }
 
-
     public Crash setCrashMessage(String crashMessage){
         this.crashMessage = crashMessage;
         return this;
     }
+
 
     public String toString() {
         return String.valueOf(basicSb) + timeSb + causeSb + crashMessageSb + statusSb;
