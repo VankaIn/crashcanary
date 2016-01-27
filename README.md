@@ -2,8 +2,8 @@
 It's a library that can save your application crash exception. App only needs one-line-code to setup and provide application context.
 
 # Why need it
-when we give our application to the tester, they found the app crash, but we no log or we cann't get the divice and link our computer
-to get log, but use the library, we can get the log easy.
+when we give our application to the tester, and they found the app crash later, but we no log or we can't get the divice and link our computer
+to print log, but use the library, we can get the log easy.
 
 # Getting started
 
