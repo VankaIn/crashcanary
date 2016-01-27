@@ -65,7 +65,7 @@ public class AppCrashCanaryContext extends CrashCanaryContext {
 ```
 
 # Screenshots
-(/screenshots/demo.gif)  
+!(/screenshots/demo.gif)  
 
 
 
