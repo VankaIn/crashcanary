@@ -24,5 +24,4 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.1.1'
     compile project(path: ':crashcanary-library')
-    compile 'com.github.moduth:blockcanary-android:1.1.0'
 }
