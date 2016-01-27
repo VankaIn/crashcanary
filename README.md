@@ -9,7 +9,7 @@ to print log, but use the library, we can get the log easy.
 
 ```gradle
 dependencies {
-        compile 'com.github.moduth:blockcanary-android:1.1.0'
+        compile 'com.github.vankain:crashcanary-library:1.0.0'
 }
 ```
 
