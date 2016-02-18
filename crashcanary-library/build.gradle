@@ -80,6 +80,9 @@ artifacts {
 }
 
 Properties properties = new Properties()
+//信息写在这个文件
+//bintray.apikey=*****
+//bintray.user=***
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
 bintray {
     user = properties.getProperty("bintray.user")
